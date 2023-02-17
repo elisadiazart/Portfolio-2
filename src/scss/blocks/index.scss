@@ -1,0 +1,39 @@
+.index{
+    margin-left: 45px;
+    margin-right: 45px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+
+    &__text{
+        margin: 0;
+        border-bottom: 1px solid white;
+        font-family: 'Futura', sans-serif;
+        text-transform: uppercase;
+        color: white;
+        font-size: 1rem;
+        font-weight: 300;
+        padding: 1.8rem;
+        padding-left: 4.5rem;
+        position: relative;
+
+        &::before{
+            content: '(01)';
+            position: absolute;
+            left: 3rem;
+            top: 1.7rem;
+            font-size: .6rem;
+            color: var(--green-color);
+        }
+
+        &--2{
+            &::before{
+                content: '(02)'
+            }
+        }
+        &--3{
+            &::before{
+                content: '(03)'
+            }
+        }
+    }
+}
