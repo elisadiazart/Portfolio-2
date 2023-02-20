@@ -30,7 +30,7 @@ header{
     &__button{
         display: none;
         @include responsive(laptop){
-            display: inline-block;
+            display: inline;
             color: var(--black-color-bg);
             font-family: 'Futura Italic', sans-serif;
             text-transform: uppercase;
@@ -43,9 +43,8 @@ header{
             border-radius: 37px;
             margin-right: 4rem;
             font-weight: 900;
-
             &:hover{
-                background-color: var(--green-color);
+                background-color: var(--green-color-hover);
             }
         }
     }
