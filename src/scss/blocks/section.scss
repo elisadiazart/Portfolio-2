@@ -12,7 +12,7 @@
     @include responsive(laptop){
         padding-top: 8rem;
         font-size: 2rem;
-        padding-bottom: 3.5rem
+        padding-bottom: 2rem
     }
 }
 
@@ -30,37 +30,44 @@
     }
 }
 
-.circle-decoration{
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background-color: transparent;
-    border: 2px solid var(--green-color);
-    margin: auto;
-    position: relative;
-
-    &::after{
-        content: '';
-        position: absolute;
-        border-radius: 50%;
-        width: 15px;
-        height: 15px;
-        background-color: transparent;
-        border: 2px solid var(--green-color);
-        transform: translate(-50%, -50%);
-        top: 50%;
-        left: 50%;
+@keyframes circle {
+    0%{
+        transform: scale(0);
+        opacity: 1;
     }
-    &::before{
-        content: '';
-        position: absolute;
-        border-radius: 50%;
-        width: 41px;
-        height: 41px;
-        background-color: transparent;
-        border: 2px solid var(--green-color);
-        transform: translate(-50%, -50%);
-        top: 50%;
-        left: 50%;
+
+    100%{
+        transform: scale(1);
+        opacity: 0;
     }
 }
+
+.circle::after, 
+.circle::before{
+    animation: circle 2s linear infinite;
+    content: '';
+    border: 2px solid var(--green-color);
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    position: absolute;
+    border-radius: 50%;
+}
+
+
+.circle{
+    width: 58px;
+    height: 58px;
+    margin: auto;
+    position: relative;
+    
+
+    &::after {
+        opacity: 0;
+        animation-delay: 1s;
+    }
+    
+}
+
+
+
