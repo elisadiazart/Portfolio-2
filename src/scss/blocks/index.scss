@@ -1,8 +1,15 @@
+@use '../mixins/responsive.scss' as *;
+
 .index{
     margin-left: 45px;
     margin-right: 45px;
     border-left: 1px solid white;
     border-right: 1px solid white;
+
+    @include responsive(laptop){
+        margin-right: 95px;
+        margin-left: 95px;
+    }
 
     &__text{
         margin: 0;
@@ -16,6 +23,28 @@
         padding-left: 4.5rem;
         position: relative;
 
+            @include responsive(laptop){
+                padding: 2.3rem;
+                font-size: 2.7rem;
+                font-weight: 400;
+                padding-left: 8rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+        &:hover{
+            background-color: var(--green-color);
+            color: black;
+            cursor: pointer;
+            .arrow-right{
+                filter: invert(1)
+            }
+                &::before{
+                color: black;
+                }
+        }
+
         &::before{
             content: '(01)';
             position: absolute;
@@ -23,6 +52,12 @@
             top: 1.7rem;
             font-size: .6rem;
             color: var(--green-color);
+            @include responsive(laptop){
+                color: white;
+                top: 2.2rem;
+                left: 4.7rem;
+                font-size: .8rem;
+                }
         }
 
         &--2{
@@ -35,5 +70,13 @@
                 content: '(03)'
             }
         }
+    }
+}
+
+.arrow-right{
+    display: none;
+    @include responsive(laptop){
+        display: block;
+    padding-right: 5rem;
     }
 }

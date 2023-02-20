@@ -1,16 +1,18 @@
+@use '../mixins/responsive.scss' as *;
+
 @font-face {
     font-family: 'Ade';
-    src: url(/assets/fonts/Ade-Display.otf);
+    src: url('/public/fonts/Ade-Display.otf');
   }
 
 @font-face {
     font-family: 'Futura';
-    src: url(/assets/fonts/futura/Futura-Book-font.ttf);
+    src: url('/public/fonts/futura/Futura-Book-font.ttf');
 }
 
 @font-face {
     font-family: 'Futura Italic';
-    src: url(/assets/fonts/futura/Futura-Book-Italic-font.ttf);
+    src: url('/public/fonts/futura/Futura-Book-Italic-font.ttf');
 }
 
 
@@ -24,24 +26,82 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @include responsive(laptop){
+        height: 1050px;
+        margin-right: 95px;
+        margin-left: 95px;
+    }
 }
 
 .title{
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin: auto;
-    color: white;
-    align-items: center ;
-    justify-content: center;
-    font-family: 'Ade', sans-serif;
-    text-transform: uppercase;
     font-size: 4.3125rem;
     font-weight: 400;
-    position: relative;
-    margin-top: 8rem;
-    margin-bottom: 4rem;
+    margin: 0;
+
+    @include responsive(laptop){
+        font-size: 6rem;
+    }
+
+    &-container{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: auto;
+        color: white;
+        align-items: center ;
+        justify-content: center;
+        font-family: 'Ade', sans-serif;
+        text-transform: uppercase;
+        position: relative;
+        margin-top: 8rem;
+        margin-bottom: 4rem;
+            @include responsive(laptop){
+            font-size: 6rem;
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 0;
+            }
+    }
+
+
+    &--subcontainer{
+        @include responsive(laptop){
+            display: flex;
+            position: relative;
+            align-items: center;
+            &::after{
+                content: 'FRONT END WEB DEVELOPER';
+                color: white;
+                position: absolute;
+                font-size: .9rem;
+                font-family: 'Futura', sans-serif;
+                right: .6rem;
+                left: -6rem;
+                bottom: 3rem;
+                width: 70px;
+                text-align: right;
+            }
+            &::before{
+                content: 'UI DESIGNER';
+                display: none;
+                @include responsive(laptop){
+                    display: block;
+                    width: 100px;
+                    right: -5rem;
+                    bottom: -.9rem;
+                    color: white;
+                    position: absolute;
+                    font-size: .9rem;
+                    font-family: 'Futura', sans-serif;
+                    line-height: 19px;
+                }
+            }
+        }
+    }
+
+
 
     &::after{
         content: '(ED)';
@@ -51,11 +111,41 @@
         font-family: 'Futura', sans-serif;
         top: calc(50% - 9.5rem);
         right: .6rem;
+        @include responsive(laptop){
+            font-size: .9rem;
+            left: -2.5rem;
+            top: -1rem;
+        }
     }
+    &::before{
+        content: 'Illustrator & graphic designer';
+        display: none;
+        @include responsive(laptop){
+            display: block;
+            width: 90px;
+            right: -1.2rem;
+            top: 1rem;
+            color: white;
+            position: absolute;
+            font-size: .9rem;
+            font-family: 'Futura', sans-serif;
+            line-height: 19px;
+        }
+    }
+
+    
+    
 }
 
 .circles{
+    margin: auto;
     margin-bottom: .5rem;
+    @include responsive(laptop){
+        margin: 0;
+        display: block;
+        width: 140px;
+        padding-bottom: 1rem;
+    }
 }
 
 .button{
@@ -64,7 +154,6 @@
     font-family: 'Futura Italic', sans-serif;
     text-transform: uppercase;
     background-color: var(--green-color);
-    margin: auto;
     text-align: center;
     padding: .7rem;
     padding-left: 2rem;
@@ -73,11 +162,18 @@
     border-radius: 37px;
     margin-top: 0rem;
     margin-bottom: 0;
+    @include responsive(laptop){
+        display: none;
+    }
 }
 
 .arrow{
     width: 30px;
     margin: auto;
     margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
+    @include responsive(laptop){
+        display: none;
+    }
 }
+
