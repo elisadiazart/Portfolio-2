@@ -37,6 +37,7 @@
             background-color: var(--green-color);
             color: black;
             cursor: pointer;
+            transition: background-color .2s;
             .arrow-right{
                 filter: invert(1)
             }

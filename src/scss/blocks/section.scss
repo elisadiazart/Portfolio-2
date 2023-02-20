@@ -1,3 +1,5 @@
+@use '../mixins/responsive.scss' as *;
+
 .section__title{
     margin: 0;
     text-align: center;
@@ -6,6 +8,12 @@
     padding-top: 4.5rem;
     padding-bottom: 2rem;
     font-size: 1.5rem;
+    font-weight: 400;
+    @include responsive(laptop){
+        padding-top: 8rem;
+        font-size: 2rem;
+        padding-bottom: 3.5rem
+    }
 }
 
 .section{
@@ -16,6 +24,10 @@
     color: white;
     padding-bottom: 3rem;
 
+    @include responsive(laptop){
+        margin-right: 95px;
+        margin-left: 95px;
+    }
 }
 
 .circle-decoration{

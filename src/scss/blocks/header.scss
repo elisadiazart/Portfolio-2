@@ -24,13 +24,35 @@ header{
             text-transform: uppercase;
             font-family: 'Futura', sans-serif;
             transform: translateX(3rem);
+            position: relative;
+
+            &:hover{
+                cursor: pointer;
+                &::after{
+                    width: 100%;
+                    transition: width .2s;
+                    
+                }
+            }
+
+            &::after{
+                content: '';
+                width: 0%;
+                height: 1px;
+                background-color: white;
+                position: absolute;
+                bottom: 0;
+                transform: translate(-50%);
+                left: 50%;
+            }
+            
         }
     }
 
     &__button{
         display: none;
         @include responsive(laptop){
-            display: inline;
+            display: flex;
             color: var(--black-color-bg);
             font-family: 'Futura Italic', sans-serif;
             text-transform: uppercase;
@@ -44,7 +66,11 @@ header{
             margin-right: 4rem;
             font-weight: 900;
             &:hover{
-                background-color: var(--green-color-hover);
+                color: white;
+                background-color: var(--black-color-bg);
+                border: 1px solid white;
+                cursor: pointer;
+                transition: background-color .2s;
             }
         }
     }
