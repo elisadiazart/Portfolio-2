@@ -25,9 +25,109 @@
     padding-bottom: 3rem;
 
     @include responsive(laptop){
-        margin-right: 95px;
-        margin-left: 95px;
+        margin-right: 155px;
+        margin-left: 155px;
     }
+}
+
+
+.gallery{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    @include responsive(laptop){
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    &__item{
+        height: 250px;
+        position: relative;
+
+        &::after{
+            content: '';
+                width: 100%;
+                height: 100%;
+                background-color: var(--green-color-hover);
+                position: absolute;
+                top: 0;
+                opacity: 0;
+                transition: opacity .5s;
+        }
+
+        &::before{
+            content: '';
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            font-family: 'Futura', sans-serif;
+            color: var(--black-color-bg);
+            z-index: 1;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 900;
+            opacity: 0;
+            font-size: 2rem;
+            transition: opacity .5s;
+        }
+        &:hover{
+            &::after{
+                opacity: 1;
+                transition: opacity .3s;
+            }
+            &::before{
+                opacity: 1;
+            }
+            
+        }
+
+        &--1{
+            &::before{
+                content: 'Password generator';
+            }
+        }
+        &--2{
+            &::before{
+                content: 'To do list';
+            }
+        }
+        &--3{
+            &::before{
+                content: 'memory card game';
+            }
+        }
+        &--4{
+            &::before{
+                content: 'Wordle copycat';
+            }
+        }
+        &--5{
+            &::before{
+                content: 'Quiz game';
+            }
+        }
+        &--6{
+            &::before{
+                content: 'Restaurant Booking';
+            }
+        }
+        &--7{
+            &::before{
+                content: 'rock, paper scissors game';
+            }
+        }
+    }
+
+    &__image{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        object-position: top;
+    }
+    
 }
 
 @keyframes circle {
@@ -64,6 +164,7 @@
     height: 58px;
     margin: auto;
     position: relative;
+    margin-bottom: 5rem;
     
 
     &::after {
