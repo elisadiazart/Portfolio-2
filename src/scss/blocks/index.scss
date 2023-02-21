@@ -12,11 +12,11 @@
     width: calc(100% - 45px - 45px);
 
     @include responsive(laptop){
-        margin-right: 95px;
-        margin-left: 95px;
+        margin-right: 155px;
+        margin-left: 155px;
         position: static;
         margin-top: 0;
-        width: calc(100% - 95px - 95px);
+        width: calc(100% - 155px - 155px);
     }
 
     &__text{
