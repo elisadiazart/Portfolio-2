@@ -2,7 +2,6 @@
 
 
 header{
-    border-bottom: 1px solid white;
     @include responsive(laptop){
         margin-right: 95px;
         margin-left: 95px;
@@ -14,6 +13,20 @@ header{
     margin-right: 45px;
     border-left: 1px solid white;
     border-right: 1px solid white;
+    width: calc(100% - 45px - 45px);
+    position: fixed;
+    border-bottom: 1px solid white;
+    z-index: 1;
+    background-color: var(--black-color-bg);
+
+    @include responsive(laptop){
+        position: static;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+    }
 
     &__text{
         display: none;
@@ -25,6 +38,7 @@ header{
             font-family: 'Futura', sans-serif;
             transform: translateX(3rem);
             position: relative;
+            
 
             &:hover{
                 cursor: pointer;
@@ -44,6 +58,7 @@ header{
                 bottom: 0;
                 transform: translate(-50%);
                 left: 50%;
+                transition: width .2s;
             }
             
         }
@@ -65,22 +80,29 @@ header{
             border-radius: 37px;
             margin-right: 4rem;
             font-weight: 400;
+            position: relative;
+            &::after{
+                content: '';
+                width: 0;
+                height: 1.3px;
+                background-color: rgb(0, 0, 0);
+                position: absolute;
+                bottom: .7rem;
+                transform: translate(-50%);
+                left: 50%;
+                transition: width .2s;
+            }
             &:hover{
-                color: white;
-                background-color: var(--black-color-bg);
-                border: 1px solid white;
                 cursor: pointer;
-                transition: background-color .2s;
+                &::after{
+                    width: calc(100% - 2rem - 2rem);
+                    transition: width .2s;
+                }
             }
         }
     }
 
-    @include responsive(laptop){
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0;
-    }
+    
 }
 
 .logo {
