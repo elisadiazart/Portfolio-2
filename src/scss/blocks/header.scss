@@ -9,6 +9,7 @@ header{
 }
 
 .nav {
+    height: 82px;
     margin-left: 45px;
     margin-right: 45px;
     border-left: 1px solid white;
@@ -17,7 +18,10 @@ header{
     position: fixed;
     border-bottom: 1px solid white;
     z-index: 1;
+    display: flex;
+    align-items: center;
     background-color: var(--black-color-bg);
+    justify-content: space-between;
 
     @include responsive(laptop){
         position: static;
@@ -84,7 +88,7 @@ header{
             &::after{
                 content: '';
                 width: 0;
-                height: 1.3px;
+                height: 1.2px;
                 background-color: rgb(0, 0, 0);
                 position: absolute;
                 bottom: .7rem;
@@ -106,14 +110,43 @@ header{
 }
 
 .logo {
-    padding-top: 2.6rem;
-    margin: auto;
-    padding-bottom: 1.3rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
     @include responsive(laptop){
         margin: 0;
         margin-left: 4rem;
         padding: 0;
         padding-top: 1.7rem;
         padding-bottom: 1.7rem;
+    }
+}
+
+.menu-icon{
+    margin-top: 1rem;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    position: relative;
+    margin-right: 2rem;
+    @include responsive(laptop){
+        display: none;
+    }
+
+    &::after{
+        content: '';
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        position: absolute;
+        top: -300%;
+    }
+
+    &::before{
+        content: '';
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        position: absolute;
+        top: 300%;
     }
 }
