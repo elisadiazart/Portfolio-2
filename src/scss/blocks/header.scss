@@ -42,10 +42,13 @@ header{
             font-family: 'Futura', sans-serif;
             transform: translateX(3rem);
             position: relative;
+            transition: font-weight .2s;
             
 
             &:hover{
                 cursor: pointer;
+                font-weight: 900;
+                transition: font-weight .2s;
                 &::after{
                     width: 100%;
                     transition: width .2s;
@@ -85,10 +88,11 @@ header{
             margin-right: 4rem;
             font-weight: 400;
             position: relative;
+            transition: font-weight .2s;
             &::after{
                 content: '';
                 width: 0;
-                height: 1.2px;
+                height: 1.25px;
                 background-color: rgb(0, 0, 0);
                 position: absolute;
                 bottom: .7rem;
@@ -98,6 +102,8 @@ header{
             }
             &:hover{
                 cursor: pointer;
+                font-weight: 900;
+                transition: font-weight .2s;
                 &::after{
                     width: calc(100% - 2rem - 2rem);
                     transition: width .2s;
@@ -114,15 +120,34 @@ header{
     margin-top: 1rem;
     @include responsive(laptop){
         margin: 0;
-        margin-left: 4rem;
         padding: 0;
         padding-top: 1.7rem;
         padding-bottom: 1.7rem;
-        transition: transform .7s;
-        cursor: pointer;
-        &:hover{
-            transition: transform .4s;
-            transform:scale(120%);
+        &__link{
+            position: relative;
+            margin-left: 4rem;
+            transform: scale(0100%);
+            transition: transform .1s;
+            &::after{
+                content: '';
+                width: 0%;
+                height: 1px;
+                background-color: white;
+                position: absolute;
+                bottom: 1.5rem;
+                transform: translate(-50%);
+                left: 50%;
+                transition: width .2s;
+            }
+            &:hover{
+                transform: scale(110%);
+                transition: transform .2s;
+                cursor: pointer;
+                &::after{
+                    width: 100%;
+                    transition: width .2s;
+                }
+            }
         }
     }
 }

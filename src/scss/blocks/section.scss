@@ -11,12 +11,13 @@
     font-weight: 400;
     @include responsive(laptop){
         padding-top: 8rem;
-        font-size: 2rem;
+        font-size: 2.3rem;
         padding-bottom: 2rem
     }
 }
 
 .section{
+    padding-top: 3rem;
     margin-left: 45px;
     margin-right: 45px;
     border-left: 1px solid white;

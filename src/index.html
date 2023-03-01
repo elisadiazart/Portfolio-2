@@ -11,7 +11,8 @@
   <body>
     <header>
       <nav class="nav">
-        <img class="logo" src="./assets/images/logo-small.svg" alt="">
+        <a class="logo__link" href=""><img class="logo" src="./assets/images/logo-small.svg" alt="">
+        </a>
         <div id="menuIcon" class="menu-icon"></div>
         <div class="nav__text">Work</div>
         <div class="nav__button">Get to know me</div>
@@ -24,16 +25,29 @@
       <div class="button">About me</div>
       <img class="arrow" src="./assets/images/arrow.svg" alt="">
     </div>
-    <div id="menu" class="index">
-      <h2 class="index__text">Web develompent <span class="arrow-right"><img src="./assets/images/arrow-right.svg" alt=""></span></h2>
-      <h2 class="index__text index__text--2">UI design<span class="arrow-right"><img src="./assets/images/arrow-right.svg" alt=""></span></h2>
-      <h2 class="index__text index__text--3">Graphic design<span class="arrow-right"><img src="./assets/images/arrow-right.svg" alt=""></span></h2>
-    </div>
+    <nav id="menu" class="index">
+      <ul>
+        <li class="index__text">Web develompent <span class="arrow-right"><img src="./assets/images/arrow-right.svg" alt=""></span></li>
+        <li class="index__text index__text--2">UI design<span class="arrow-right"><img src="./assets/images/arrow-right.svg" alt=""></span></li>
+        <li class="index__text index__text--3">Graphic design<span class="arrow-right"><img src="./assets/images/arrow-right.svg" alt=""></span></li>
+      </ul>
+    </nav>
     <div class="section section--web-development">
       <h3 class="section__title">Web <span class="display-block">DeVELOPMENT</span> </h3>
       <div class="circle"></div>
       <div class="gallery">
-        <div class="gallery__project">Password generator.</div>
+        <div class="gallery__nav">
+        <div class="gallery__button">Password generator.</div>
+        <div class="gallery__button">booking website.</div>
+        <div class="gallery__button">rOCK, PAPER, SCISSORS GAME.</div>
+        <div class="gallery__button">wordle.</div>
+        <div class="gallery__button">quiz game.</div>
+        <div class="gallery__button">pokemon memory card game.</div>
+        <div class="gallery__button">to do list app.</div>
+      </div>
+        <div class="project">
+          <h2 class="project__title">Password generator.</h2>
+        </div>
       </div>
     </div>
     </main>
