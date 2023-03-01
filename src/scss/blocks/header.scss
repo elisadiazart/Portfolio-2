@@ -118,6 +118,12 @@ header{
         padding: 0;
         padding-top: 1.7rem;
         padding-bottom: 1.7rem;
+        transition: transform .7s;
+        cursor: pointer;
+        &:hover{
+            transition: transform .4s;
+            transform:scale(120%);
+        }
     }
 }
 
@@ -138,7 +144,9 @@ header{
         height: 3px;
         background-color: white;
         position: absolute;
-        top: -300%;
+        transform: translateY(-.6rem);
+        transition-property: transform;
+        transition-duration: 0.3s;
     }
 
     &::before{
@@ -147,6 +155,26 @@ header{
         height: 3px;
         background-color: white;
         position: absolute;
-        top: 300%;
+        transform: translateY(.6rem);
+        transition-property: transform;
+        transition-duration: 0.3s;
     }
+
+    
+}
+
+.line--cross {
+    background-color: transparent;
+
+        &::before {
+        transform: rotate(45deg);
+        transition-property: transform;
+        transition-duration: 0.3s;
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+            transition-property: transform;
+            transition-duration: 0.3s;
+        }
 }

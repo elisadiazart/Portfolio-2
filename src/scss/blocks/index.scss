@@ -1,6 +1,9 @@
 @use '../mixins/responsive.scss' as *;
 
 .index{
+    &--active{
+    transform: translateY(0rem);
+    }
     margin-top: 81.39px;
     margin-left: 45px;
     margin-right: 45px;
@@ -8,10 +11,13 @@
     border-right: 1px solid white;
     position: absolute;
     background-color: var(--black-color-bg);
-    top: 0;
+    top: 0rem;
+    transform: translateY(-20rem);
     width: calc(100% - 45px - 45px);
+    transition: transform .6s;
 
     @include responsive(laptop){
+        transform: translate(0);
         margin-right: 155px;
         margin-left: 155px;
         position: static;
