@@ -159,6 +159,7 @@ header{
     background-color: white;
     position: relative;
     margin-right: 2rem;
+    transition: background-color .7s;
     @include responsive(laptop){
         display: none;
     }
@@ -185,11 +186,14 @@ header{
         transition-duration: 0.3s;
     }
 
-    
+    &__container{
+        padding: 1rem 0 1.5rem 1rem;
+    }
 }
 
 .line--cross {
     background-color: transparent;
+    transition: background-color .4s;
 
         &::before {
         transform: rotate(45deg);

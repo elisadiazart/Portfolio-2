@@ -31,10 +31,10 @@
         font-family: 'Futura', sans-serif;
         text-transform: uppercase;
         color: white;
-        font-size: 1rem;
+        font-size: 1.5rem;
         font-weight: 300;
         padding: 1.8rem;
-        padding-left: 4.5rem;
+        padding-left: 5.5rem;
         position: relative;
 
             @include responsive(laptop){
@@ -65,7 +65,7 @@
         &::before{
             content: '(01)';
             position: absolute;
-            left: 3rem;
+            left: 4rem;
             top: 1.7rem;
             font-size: .6rem;
             color: var(--green-color);
