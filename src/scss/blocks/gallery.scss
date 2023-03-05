@@ -34,6 +34,7 @@
         @include responsive(laptop){
         text-align: center;
         display: inline;
+        width: auto;
         color: var(--black-color-bg);
         background-color: var(--green-color);
         padding: .9rem;
@@ -48,12 +49,14 @@
         z-index: 0;
         &::after{
             content: '(01)';
+            display: inline;
             font-size: 10px;
             position: absolute;
             left: 2rem;
         }
         &::before{
             content: '';
+            display: block;
             position: absolute;
             top: 0;
             left: 0;
@@ -195,6 +198,7 @@
     margin-right: 5rem;
     font-family: 'Futura', sans-serif;
     display: flex;
+    flex-direction: row;
     gap: 8rem;
 
 
