@@ -2,6 +2,7 @@
 
 .index{
     &--active{
+    position: fixed;
     transform: translateY(0rem);
     }
     margin-top: 81.39px;
@@ -15,6 +16,7 @@
     transform: translateY(-20rem);
     width: calc(100% - 45px - 45px);
     transition: transform .6s;
+    z-index: 10;
 
     @include responsive(laptop){
         transform: translate(0);
@@ -34,7 +36,7 @@
         font-size: 1.5rem;
         font-weight: 300;
         padding: 1.8rem;
-        padding-left: 5.5rem;
+        padding-left: 4.5rem;
         position: relative;
 
             @include responsive(laptop){
@@ -65,7 +67,7 @@
         &::before{
             content: '(01)';
             position: absolute;
-            left: 4rem;
+            left: 3rem;
             top: 1.7rem;
             font-size: .6rem;
             color: var(--green-color);

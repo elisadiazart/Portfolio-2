@@ -68,6 +68,18 @@
     height: 58px;
     margin: auto;
     position: relative;
+    margin-bottom: 3rem;
+    
+
+    &::after {
+        opacity: 0;
+        animation-delay: 1s;
+    }
+    @include responsive(laptop){
+    width: 58px;
+    height: 58px;
+    margin: auto;
+    position: relative;
     margin-bottom: 5rem;
     
 
@@ -75,7 +87,7 @@
         opacity: 0;
         animation-delay: 1s;
     }
-    
+}
 }
 
 
