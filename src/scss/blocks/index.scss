@@ -20,6 +20,9 @@
 
     &__link{
         @include responsive(laptop){
+            
+            padding-left: 8rem;
+            padding: 2.3rem;
             height: 100%;
         width: 100%;
         display: flex; 
@@ -49,10 +52,10 @@
         position: relative;
 
             @include responsive(laptop){
-                padding: 2.3rem;
+                padding: 1rem;
+                padding-left: 3.5rem;
                 font-size: 2.7rem;
                 font-weight: 400;
-                padding-left: 8rem;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
