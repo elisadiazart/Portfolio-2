@@ -3,6 +3,10 @@
 .gallery{
     margin-left: 10%;
     margin-right: 10%;
+    @include responsive(laptop){
+        margin-left: 16%;
+        margin-right:16%;
+    }
 
     &__nav{
         display: flex;
