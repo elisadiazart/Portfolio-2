@@ -18,6 +18,15 @@
     transition: transform .6s;
     z-index: 10;
 
+    &__link{
+        @include responsive(laptop){
+            height: 100%;
+        width: 100%;
+        display: flex; 
+        justify-content: space-between;
+        }
+    }
+
     @include responsive(laptop){
         transform: translate(0);
         margin-right: 155px;

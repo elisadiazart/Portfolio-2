@@ -24,8 +24,8 @@ header{
     justify-content: space-between;
 
     @include responsive(laptop){
-        position: static;
-        width: 100%;
+        position: fixed;
+        width: calc(100% - 155px - 155px);
         display: flex;
         justify-content: space-between;
         align-items: center;
