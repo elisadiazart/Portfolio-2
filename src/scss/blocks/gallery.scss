@@ -194,7 +194,7 @@
     &__image{
         margin-bottom: 2rem;
     }
-    @include responsive(laptop){
+    @include responsive(1330px){
     margin-left: 8rem;
     margin-right: 8rem;
     font-family: 'Futura', sans-serif;
