@@ -182,16 +182,29 @@
 
     &__image-description-container{
         margin-top: .5rem;
+
+        &--ui{
+            margin: 0  16% 0 16%;
+        }
     }
 
     &__description{
         font-size: .9rem;
         line-height: 1.4rem;
+        font-family: 'Futura' ,sans-serif;
+        margin-bottom: 4rem;
     }
 
     &__image{
         margin-bottom: 2rem;
+
+        &--ui{
+            width: 400px;
+            margin: auto;
+            margin-bottom: 4rem;
+        }
     }
+
     @include responsive(laptop){
     margin-left: 5rem;
     margin-right: 5rem;
@@ -199,6 +212,8 @@
     display: flex;
     flex-direction: row;
     gap: 8rem;
+
+    
 
 
     &__title-links-container{
@@ -249,9 +264,6 @@
         line-height: 1.4rem;
     }
 
-    &__image{
-        margin-bottom: 2rem;
-    }
     }
 }
 
