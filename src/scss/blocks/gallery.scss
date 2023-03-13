@@ -184,15 +184,14 @@
         margin-top: .5rem;
 
         &--ui{
-            margin: 0  16% 0 16%;
+            margin: 0 16% 0 16%;
         }
     }
 
     &__description{
         font-size: .9rem;
         line-height: 1.4rem;
-        font-family: 'Futura' ,sans-serif;
-        margin-bottom: 4rem;
+        font-family: 'Futura', sans-serif;
     }
 
     &__image{
@@ -204,14 +203,13 @@
             margin-bottom: 4rem;
         }
     }
-
     @include responsive(laptop){
     margin-left: 5rem;
     margin-right: 5rem;
     font-family: 'Futura', sans-serif;
     display: flex;
     flex-direction: row;
-    gap: 8rem;
+    justify-content: space-between;
 
     
 
@@ -257,6 +255,8 @@
 
     &__image-description-container{
         margin-top: 1rem;
+        min-width: 200px;
+
     }
 
     &__description{
