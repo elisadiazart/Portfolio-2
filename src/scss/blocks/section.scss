@@ -43,6 +43,13 @@
             left: 50%;
             bottom: 0rem;
         }
+
+        &--gd{
+            padding-bottom: 1.5rem;
+            &::after{
+                content: none;
+            }
+        }
     }
 }
 
